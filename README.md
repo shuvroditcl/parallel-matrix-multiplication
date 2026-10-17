@@ -11,7 +11,6 @@ This repository contains an MPI (Message Passing Interface) C++ implementation o
 ## Mathematical Background & Methodology
 The program estimates the Gamma function for real positive values using the finite limits integral:
 $$\Gamma(x)=\int_{0}^{1}(log\frac{1}{t})^{x-1}dt$$
-[cite: 5]
 
 To achieve this in parallel without massive network overhead, the algorithm avoids a traditional Master-Slave architecture[cite: 7]. Sending 3,000,000,000 seeds from a master node to slave nodes would require approximately 13,968 seconds just for network transmission. Instead, the program uses the leapfrog method, where a jump constant ($k$) allows each processor to independently generate its unique sequence of random numbers by leaping over values used by other processes[cite: 8]. 
 
