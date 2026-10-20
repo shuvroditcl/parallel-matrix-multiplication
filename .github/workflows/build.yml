@@ -1,0 +1,14 @@
+name: C++ Build CI
+
+on:
+  push:
+    branches: [ "main", "master" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+      
+    - name: Compile the simulation
+      run: g++ -O3 -fopenmp main.cpp -o matrix_mult
