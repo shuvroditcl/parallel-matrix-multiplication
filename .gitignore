@@ -1,0 +1,13 @@
+# Compiled objects and executables
+*.o
+*.exe
+*.out
+matrix_mult
+
+# Data outputs
+*.csv
+*.dat
+*.txt
+
+# OS generated files
+.DS_Store
